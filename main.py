@@ -1,4 +1,4 @@
-#Dungeon Explorer Demo! (DgE for short) 
+#Dungeon Explorer Demo! (DgE for short)
 
 
 print("Welcome to Dungeon Explorer!")
@@ -14,7 +14,6 @@ starting_pos = random.randint(1,3)
 health = 100
 new_pos = ""
 facing = 0 #doesn't do anything yet so change it to whatever lol
-#cheats = False WIP
 
 def action():
     while health > 0:
@@ -28,8 +27,6 @@ def action():
             where_am_i()
         if inp == "list" or inp == "lst":
             lst()
-        #if inp == "extras" or inp == "extra" or inp == "sss" or inp == "super secret settings":
-            #extras()
 
 def lst():
   print(" ")
@@ -141,34 +138,4 @@ def interact1():
         global new_pos
         new_pos = "large empty room"
         print("You open the door.. Your now in a large empty room.")
-
-#super secret extras
-def extras():
-  global extras
-  print("Just so you know, the Super Secret Settings ARE considered cheats")
-  inp = str(input("Super Secret Settings? "))
-  if inp == "yes" or "y":
-    cheats = True
-    sss()
-  elif inp == "no" or "n":
-    cheats = False
-
-def sss():
-  global health
-  inp = str(input("Which settin' you needin' pluh? "))
-  if inp == "list" or inp == "lst":
-    print(" ")
-    print("Super Secret Settings Controls")
-    print("-'beatthegame' or 'btg' instantly beats the game for you!")
-    print("-'infhealth' or 'ih' gives you infinite health!")
-    print("-'i was just playin' cuh' exits the Super Secret Settings menu")
-    print(" ")
-  if inp == "beatthegame" or inp == "btg":
-    health = 0 
-    print("You lose!")
-  if inp == "i was just playin' cuh":
-    print(" ")
-    print("ight i gotchu playa just lmk if you change yo mind")
-    print(" ")
-    action()
 action()
